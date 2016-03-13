@@ -7,9 +7,9 @@ pythonの勉強
 
 <img src="http://news.mynavi.jp/series/python/001/images/003.jpg" style="width:400px;border:2px solid yellow">
 
-Javaは、C#でも代替えが可能だと思うけれど、確かにpythonは、面白そう。
+Javaは、C#で代替えが可能だと思うけれど、確かにpythonは面白そう。
 
-この記事の筆者は、あるタスクについて、上記の３つのプログラム言語でコードを書いて、比較している。pythonはとてもシンプル。アルゴリズムに集中して、記述できるところがいい。
+この記事の筆者は、あるタスクについて、上記の３つのプログラム言語でコードを書いて、比較している。pythonはとてもシンプル。アルゴリズムに集中して記述できるところがいい。
 
 そもそも、pythonのこの記事をどうして見たのか、というと、hugoが始まり。使いたいテーマ「[Hugo Theme: Base16](http://themes.gohugo.io/base16/)」があり、そのテーマの機能を使いこなすには、pythonのAPIが必要とあり…。
 
@@ -45,3 +45,10 @@ u
 参考サイト
 - [文字コードの指定 - 日本語と文字コード - Python入門](http://www.pythonweb.jp/tutorial/japan/index1.html)
 - [#02 はじめてのPythonプログラム | Python入門 - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_python_v2/26002)
+
+Visual Studio Codeで使えるか？
+---------------------------------
+
+これから試す。以下は参考サイト。
+
+[Visual Studio Code で Python - JH1LHVの雑記帳](http://jh1lhv.hatenablog.jp/entry/2015/11/24/211052)
