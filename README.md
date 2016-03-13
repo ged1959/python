@@ -15,7 +15,7 @@ Javaは、C#で代替えが可能だと思うけれど、確かにpythonは面�
 
 <img src="https://raw.githubusercontent.com/htdvisser/hugo-base16-theme/master/images/screenshot.png" style="width:400px;border:2px solid yellow">
 
-なので、pythonの入門編を探していたら、ここに来た、というわけ。という、かなり半端な動機なので、忘れないように、githubでgitしながらチョコチョコとやろう。
+なので、pythonの入門編を探していたら、上記のサイトに来た、というわけ。ちょこっと使って終わりにしようと思っていたけど、改心して、少し真面目に勉強してみようか。そんな半端な動機なので、忘れないように、githubでgitしながらチョコチョコとやろう。
 
 で、最初のメモ。
 
