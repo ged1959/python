@@ -9,9 +9,9 @@
 
     
 
-    <title>Hugo - ぐだぐだ版 python memo</title>
+    <title>Categories - ぐだぐだ版 python memo</title>
 
-    <link rel="canonical" href="http://ged1959.github.io/python/tags/hugo/">
+    <link rel="canonical" href="http://ged1959.github.io/python/categories/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="theme-color" content="#2196f3">
 
@@ -419,31 +419,13 @@ nav.page a.next {
       </header>
 
 
-<div class="list">
+<div class="list terms">
 
-  <header class="page-title">Hugo</header>
+  <header class="page-title">Categories</header>
 
   <div class="site">
     
-    <article class="li">
-  <a href="http://ged1959.github.io/python/post/first_memo/">
-    <header>
-      <div class="aside">
-        <time class="date">Mon, Mar 21, 2016</time> - <span class="section">post</span>
-      </div>
-      <div class="title">このメモの作成方法</div>
-    </header>
-
-    <div class="summary">READMEに書いた通り、pythonの勉強用のメモ。忘れっぽいので。 このサイトの作成法も やっぱり忘れるだろうから、以下に。 localにサイトを作る まず、サイトの基本を作成。 hugo new site python_memo テーマフォルダを作る。 mkdir themes テーマをクローンする。（作者に感謝！！） git clone https://github.com/tanksuzuki/angels-ladder archetypesフォルダにdefault.mdを作る。内容は以下。 +++ date = &quot;now()&quot; draft = true slug = &quot;&quot; tags = [&quot;&quot;, &quot;&quot;] title = &quot;&quot; +++ config.tomlを編集する。内容は以下。 baseurl = &quot;http://ged1959.github.io/python/&quot; languageCode = &quot;ja-jp&quot; title = &quot;My Memo&quot; canonifyurls = true postを一つ作る。 hugo new post/first.md 上に、何かを書き込んで、以下で動作テスト。 hugo server -t angels-ladder -D Githubにアップする アップロード用のデータを作成する。記事中のdraft = trueはdraft = falseとする。コマンドでもいいらしい。 hugo undraft content\post\first.md で、作成。 hugo -t angels-ladder publicのフォルダができる。中のindex.htmlをクリックすると、サイトが見える、という訳ではない。たぶん、上でpathを決めたから。で、publicへ。 cd public/ gitにする。 git init リモートリポジトリを指定する。 git remote add origin https://github.com/ged1959/python.git gh-pagesのbranchを作成し、branchを移動する。 git checkout -b gh-pages 続いて、お決まりの手順。 git add ....</div>
-  </a>
-</article>
-
-    
   </div>
-
-  
-
-
 
 </div>
 <footer class="site">
