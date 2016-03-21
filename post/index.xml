@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My Memo</title>
+    <title>Posts on ぐだぐだ版 python memo</title>
     <link>http://ged1959.github.io/python/post/</link>
-    <description>Recent content in Posts on My Memo</description>
+    <description>Recent content in Posts on ぐだぐだ版 python memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 21 Mar 2016 15:14:20 +0900</lastBuildDate>
