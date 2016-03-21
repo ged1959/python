@@ -6,7 +6,111 @@
     <description>Recent content on My Memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
+    <lastBuildDate>Mon, 21 Mar 2016 15:14:20 +0900</lastBuildDate>
     <atom:link href="http://ged1959.github.io/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>このメモの作成方法</title>
+      <link>http://ged1959.github.io/python/post/first_memo/</link>
+      <pubDate>Mon, 21 Mar 2016 15:14:20 +0900</pubDate>
+      
+      <guid>http://ged1959.github.io/python/post/first_memo/</guid>
+      <description>
+
+&lt;p&gt;READMEに書いた通り、pythonの勉強用のメモ。忘れっぽいので。&lt;/p&gt;
+
+&lt;h2 id=&#34;このサイトの作成法も:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;このサイトの作成法も&lt;/h2&gt;
+
+&lt;p&gt;やっぱり忘れるだろうから、以下に。&lt;/p&gt;
+
+&lt;h3 id=&#34;localにサイトを作る:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;localにサイトを作る&lt;/h3&gt;
+
+&lt;p&gt;まず、サイトの基本を作成。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new site python_memo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;テーマフォルダを作る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir themes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;テーマをクローンする。（作者に感謝！！）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/tanksuzuki/angels-ladder
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;archetypesフォルダにdefault.mdを作る。内容は以下。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+date = &amp;quot;now()&amp;quot;
+draft = true
+slug = &amp;quot;&amp;quot;
+tags = [&amp;quot;&amp;quot;, &amp;quot;&amp;quot;]
+title = &amp;quot;&amp;quot;
++++
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;config.tomlを編集する。内容は以下。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;baseurl = &amp;quot;http://ged1959.github.io/python/&amp;quot;
+languageCode = &amp;quot;ja-jp&amp;quot;
+title = &amp;quot;My Memo&amp;quot;
+canonifyurls = true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;postを一つ作る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new post/first.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上に、何かを書き込んで、以下で動作テスト。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo server -t angels-ladder -D
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;githubにアップする:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;Githubにアップする&lt;/h3&gt;
+
+&lt;p&gt;アップロード用のデータを作成する。記事中の&lt;code&gt;draft = true&lt;/code&gt;は&lt;code&gt;draft = false&lt;/code&gt;とする。コマンドでもいいらしい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo undraft content\post\first.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;で、作成。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo -t angels-ladder
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;publicのフォルダができる。中のindex.htmlをクリックすると、サイトが見える、という訳ではない。たぶん、上で&lt;code&gt;path&lt;/code&gt;を決めたから。で、publicへ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd public/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gitにする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;リモートリポジトリを指定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote add origin https://github.com/ged1959/python.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gh-pagesのbranchを作成し、branchを移動する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout -b gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;続いて、お決まりの手順。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add .
+git commit -m &amp;quot;1st commit&amp;quot;
+git push -u origin gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上。&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

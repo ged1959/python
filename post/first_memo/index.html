@@ -127,6 +127,45 @@ canonifyurls = true
 
 <h3 id="githubにアップする:e8fb9c67eba912c72729806db31eaa1b">Githubにアップする</h3>
 
+<p>アップロード用のデータを作成する。記事中の<code>draft = true</code>は<code>draft = false</code>とする。コマンドでもいいらしい。</p>
+
+<pre><code>hugo undraft content\post\first.md
+</code></pre>
+
+<p>で、作成。</p>
+
+<pre><code>hugo -t angels-ladder
+</code></pre>
+
+<p>publicのフォルダができる。中のindex.htmlをクリックすると、サイトが見える、という訳ではない。たぶん、上で<code>path</code>を決めたから。で、publicへ。</p>
+
+<pre><code>cd public/
+</code></pre>
+
+<p>gitにする。</p>
+
+<pre><code>git init
+</code></pre>
+
+<p>リモートリポジトリを指定する。</p>
+
+<pre><code>git remote add origin https://github.com/ged1959/python.git
+</code></pre>
+
+<p>gh-pagesのbranchを作成し、branchを移動する。</p>
+
+<pre><code>git checkout -b gh-pages
+</code></pre>
+
+<p>続いて、お決まりの手順。</p>
+
+<pre><code>git add .
+git commit -m &quot;1st commit&quot;
+git push -u origin gh-pages
+</code></pre>
+
+<p>以上。</p>
+
       
       
       

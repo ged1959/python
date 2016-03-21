@@ -70,6 +70,45 @@ canonifyurls = true
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;githubにアップする:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;Githubにアップする&lt;/h3&gt;
+
+&lt;p&gt;アップロード用のデータを作成する。記事中の&lt;code&gt;draft = true&lt;/code&gt;は&lt;code&gt;draft = false&lt;/code&gt;とする。コマンドでもいいらしい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo undraft content\post\first.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;で、作成。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo -t angels-ladder
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;publicのフォルダができる。中のindex.htmlをクリックすると、サイトが見える、という訳ではない。たぶん、上で&lt;code&gt;path&lt;/code&gt;を決めたから。で、publicへ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd public/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gitにする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;リモートリポジトリを指定する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote add origin https://github.com/ged1959/python.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;gh-pagesのbranchを作成し、branchを移動する。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git checkout -b gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;続いて、お決まりの手順。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add .
+git commit -m &amp;quot;1st commit&amp;quot;
+git push -u origin gh-pages
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上。&lt;/p&gt;
 </description>
     </item>
     
