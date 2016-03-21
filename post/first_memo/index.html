@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    このメモの作成方法 | My Memo
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ged1959.github.io/python/post/first_memo/"/>
+
+  
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/sanitize.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/responsive.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/highlight_monokai.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/theme.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/custom.css">
+  
+  
+  <link href="http://ged1959.github.io/python/index.xml" rel="alternate" type="application/rss+xml" title="My Memo" />
+  <link href="http://ged1959.github.io/python/index.xml" rel="feed" type="application/rss+xml" title="My Memo" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://ged1959.github.io/python/">My Memo</a></h1>
+        
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>このメモの作成方法</h1>
+      <div class="meta">
+        Mar 21, 2016 &nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/hugo">hugo</a>&nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/how-to">how-to</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p>READMEに書いた通り、pythonの勉強用のメモ。忘れっぽいので。</p>
+
+<h2 id="このサイトの作成法も:e8fb9c67eba912c72729806db31eaa1b">このサイトの作成法も</h2>
+
+<p>やっぱり忘れるだろうから、以下に。</p>
+
+<h3 id="localにサイトを作る:e8fb9c67eba912c72729806db31eaa1b">localにサイトを作る</h3>
+
+<p>まず、サイトの基本を作成。</p>
+
+<pre><code>hugo new site python_memo
+</code></pre>
+
+<p>テーマフォルダを作る。</p>
+
+<pre><code>mkdir themes
+</code></pre>
+
+<p>テーマをクローンする。（作者に感謝！！）</p>
+
+<pre><code>git clone https://github.com/tanksuzuki/angels-ladder
+</code></pre>
+
+<p>archetypesフォルダにdefault.mdを作る。内容は以下。</p>
+
+<pre><code>+++
+date = &quot;now()&quot;
+draft = true
+slug = &quot;&quot;
+tags = [&quot;&quot;, &quot;&quot;]
+title = &quot;&quot;
++++
+</code></pre>
+
+<p>config.tomlを編集する。内容は以下。</p>
+
+<pre><code>baseurl = &quot;http://ged1959.github.io/python/&quot;
+languageCode = &quot;ja-jp&quot;
+title = &quot;My Memo&quot;
+canonifyurls = true
+</code></pre>
+
+<p>postを一つ作る。</p>
+
+<pre><code>hugo new post/first.md
+</code></pre>
+
+<p>上に、何かを書き込んで、以下で動作テスト。</p>
+
+<pre><code>hugo server -t angels-ladder -D
+</code></pre>
+
+<h3 id="githubにアップする:e8fb9c67eba912c72729806db31eaa1b">Githubにアップする</h3>
+
+      
+      
+      
+    </article>
+    
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      
+      
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="http://ged1959.github.io/python/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+</body>
+</html>
+
