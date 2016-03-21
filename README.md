@@ -52,3 +52,12 @@ Visual Studio Codeで使えるか？
 これから試す。以下は参考サイト。
 
 [Visual Studio Code で Python - JH1LHVの雑記帳](http://jh1lhv.hatenablog.jp/entry/2015/11/24/211052)
+
+リンク
+-------
+
+- [python.jp](http://www.python.jp/)
+- [Welcome to Python.org](https://www.python.org/)
+- [Pythonや機械学習、そして言語の競争について – 極めて主観的な見地から | コンピュータサイエンス | POSTD](http://postd.cc/python-machine-learning-and-language-wars-a-highly-subjective-point-of-view/)
+- [Python入門](http://www.tohoho-web.com/python/index.html)
+- [[python] 細かすぎて伝わりにくい、Pythonの本当の落とし穴10選 | 私の小岩ホッチキス](http://kwatch.houkagoteatime.net/blog/2014/08/24/python-pitfalls/)
