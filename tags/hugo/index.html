@@ -1,458 +1,96 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.15" />
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://ged1959.github.io/python/index.xml">
-
-    
-
-    <title>Hugo - ぐだぐだ版 python memo</title>
-
-    <link rel="canonical" href="http://ged1959.github.io/python/tags/hugo/">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <meta name="theme-color" content="#2196f3">
-
-    
-
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-      <script async src="https://cdn.ampproject.org/v0.js"></script>
-      <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-
-      <style amp-custom>
- 
-html {
-  font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-body {
-  font-family: "Open Sans", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-size: inherit;
-  color: #37474f;
-}
-
-html,
-body {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-a {
-  color: #2196f3;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus,
-a:active {
-  color: #1976d2;
-}
-
-h1, h2, h3, h4, h5 ,h6 {
-  margin: 0;
-  font-size: 1rem;
-}
-
- 
-.container {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
- 
-header.site {
-  padding: 1rem 0;
-  box-shadow: 0 -1px 0 #cfd8dc inset, 0 2px 0 0 rgba(236,239,241 ,.5);
-  margin-bottom: 1rem;
-}
-
-header.site a {
-  display: inline-block;
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 1.5rem;
-}
-
-header.site a:before,
-header.site a:after {
-  display: inline-block;
-  content: '';
-  height: 1.5rem;
-}
-
-header.site a:before {
-  vertical-align: 0;
-}
-
-header.site a:after {
-  vertical-align: -.5rem;
-}
-
-footer.site {
-  margin-bottom: 2rem;
-  padding: 1rem 0;
-  font-size: .8rem;
-  border-top: 1px solid #cfd8dc;
-  box-shadow: 0 2px 0 0 rgba(236,239,241 ,.5) inset;
-  color: #78909c;
-  line-height: 1rem;
-}
-
-article.li {
-  margin-bottom: 1.5rem;
-}
-
-article.li:last-child {
-  margin-bottom: 0;
-}
-
-article.li>a {
-  display: block;
-}
-
-article.li>a:hover {
-  text-decoration: none;
-}
-
-article.li>a:hover .title {
-  text-decoration: underline;
-}
-
-article.single header {
-  margin-bottom: 2rem;
-}
-
-article .aside {
-  color: #78909c;
-  font-size: .8rem;
-  font-weight: 700;
-  line-height: 1rem;
-
-}
-
-article .aside::before,
-article .aside::after {
-  content: '';
-  display: inline-block;
-  height: 1rem;
-}
-
-article .aside::before {
-  vertical-align: 0;
-}
-
-article .aside::after {
-  vertical-align: -.5rem;
-}
-
-article .title {
-  line-height: 1rem;
-  font-weight: 700;
-  font-size: 1rem;
-  word-break: break-all;
-}
-
-article .title::before,
-article .title::after {
-  display: inline-block;
-  content: '';
-  height: 1rem;
-}
-
-article .title::before {
-  vertical-align: 0;
-}
-
-article .title::after {
-  vertical-align: -.5rem;
-}
-
-article .summary {
-  color: #78909c;
-  font-size: .8rem;
-  word-break: break-all;
-  line-height: 1rem;
-}
-
-article .summary::before,
-article .summary::after {
-  display: inline-block;
-  content: '';
-  height: 1rem;
-}
-
-article .summary::before {
-  vertical-align: 0;
-}
-
-article .summary::after {
-  vertical-align: -.5rem;
-}
-
-article .body {
-  margin-bottom: 2rem;
-}
-
-article .body a {
-  text-decoration: underline;
-}
-
-article .body p {
-  line-height: 1.5rem;
-  margin: .5rem 0;
-  word-break: break-all;
-}
-
-article .body p::before,
-article .body p::after {
-  content: '';
-  display: inline-block;
-  height: 1.5rem;
-}
-
-article .body p::before {
-  vertical-align: 0;
-}
-
-article .body p::after{
-  vertical-align: -1rem;
-}
-
-article .body h1,
-article .body h2,
-article .body h3,
-article .body h4,
-article .body h5,
-article .body h6 {
-  word-break: break-all;
-}
-
-article .body h1:first-child,
-article .body h2:first-child,
-article .body h3:first-child,
-article .body h4:first-child,
-article .body h5:first-child,
-article .body h6:first-child {
-  margin-top: 0;
-}
-
-article .body h1,
-article .body h2 {
-  position: relative;
-  margin-top: 1.5rem;
-  padding: .5rem 0;
-  line-height: 1rem;
-  font-weight: 700;
-  box-shadow: 0 -1px 0 0 #cfd8dc inset , 0 2px 0 0 rgba(236,239,241 ,.5);
-}
-
-article .body h1::before,
-article .body h2::before {
-  position: absolute;
-  content: '';
-  display: block;
-  left: 0;
-  bottom: 0;
-  width: 30%;
-  height: 2px;
-  border-bottom: 1px solid #2196f3;
-  box-shadow: 0 2px 0 0 rgba(33,150,243,.2);
-}
-
-article .body h3 {
-  margin-top: 1.5rem;
-  line-height: 1rem;
-  font-weight: 700;
-}
-
-article .body h4 {
-  margin-top: 1.5rem;
-  text-decoration: underline;
-}
-
-article .body blockquote {
-  font-size: .8rem;
-  padding: .5rem;
-  border-left: none;
-  margin: .5rem 0;
-  background-color: #eceff1;
-}
-
-article .body blockquote p {
-  line-height: 1rem;
-  margin: 0;
-}
-
-article .body blockquote p::before,
-article .body blockquote p::after {
-  height: 1rem;
-}
-
-article .body blockquote p::after {
-  vertical-align: -.5rem;
-}
-
-article .body blockquote ul,
-article .body blockquote ol {
-  margin: 0;
-  padding: 0;
-  padding-left: 1.5rem;
-}
-
-article .body ul,
-article .body ol {
-  padding: .5rem 0;
-  padding-left: 1.5rem;
-  margin: 0;
-  line-height: 1.5rem;
-}
-
-article .body amp-img {
-  max-width: 100%;
-  box-shadow: 0 0 0 .25rem #eceff1;
-  margin: 1rem 0;
-}
-
-article .body pre {
-  padding: .5rem;
-  margin: .5rem 0;
-  border: none;
-  border-radius: 0;
-  font-size: .8rem;
-  line-height: 1rem;
-  overflow: auto;
-  background-color: #37474F;
-  color: #fff;
-  text-shadow: 1px 1px 0 #263238;
-}
-
-article .body p code {
-  padding: .25rem;
-  margin: 0 .25rem;
-  font-size: .8rem;
-  border-radius: 5px;
-  white-space: nowrap;
-  line-height: 1rem;
-  background-color: #37474f;
-  color: #fff;
-  text-shadow: 1px 1px 0 #263238;
-}
-
-aside.article {
-  margin-bottom: 2rem;
-}
-
-aside.article.tags a {
-  display: inline-block;
-  background-color: #eceff1;
-  color: #37474f;
-  padding: .25rem .5rem;
-  margin-right: .25rem;
-  font-size: .8rem;
-  font-weight: 700;
-  border-radius: 5px;
-  line-height: 1rem;
-}
-
-.page-title {
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-div.site {
-  margin-bottom: 2rem;
-}
-
-nav.page {
-  position: relative;
-  margin-bottom: 2rem;
-  min-height: 1rem;
-}
-
-nav.page a {
-  position: absolute;
-  display: inline-block;
-  font-size: .8rem;
-  font-weight: 700;
-}
-
-nav.page a.next {
-  right: 0;
-}
-</style>
-
-
-  </head>
-
-  <body>
-    <amp-analytics type="googleanalytics" id="analytics1">
-      <script type="application/json">
-{
-  "vars": {
-    "account": ""
-  },
-  "triggers": {
-    "trackPageview": {
-      "on": "visible",
-      "request": "pageview"
-    }
-  }
-}
-      </script>
-    </amp-analytics>
-
-    <div class="container">
-      <header class="site">
-        <a href="http://ged1959.github.io/python/">ぐだぐだ版 python memo</a>
-      </header>
-
-
-<div class="list">
-
-  <header class="page-title">Hugo</header>
-
-  <div class="site">
-    
-    <article class="li">
-  <a href="http://ged1959.github.io/python/post/first_memo/">
-    <header>
-      <div class="aside">
-        <time class="date">Mon, Mar 21, 2016</time> - <span class="section">post</span>
-      </div>
-      <div class="title">このメモの作成方法</div>
-    </header>
-
-    <div class="summary">READMEに書いた通り、pythonの勉強用のメモ。忘れっぽいので。 このサイトの作成法も やっぱり忘れるだろうから、以下に。 localにサイトを作る まず、サイトの基本を作成。 hugo new site python_memo テーマフォルダを作る。 mkdir themes テーマをクローンする。（作者に感謝！！） git clone https://github.com/tanksuzuki/angels-ladder archetypesフォルダにdefault.mdを作る。内容は以下。 +++ date = &quot;now()&quot; draft = true slug = &quot;&quot; tags = [&quot;&quot;, &quot;&quot;] title = &quot;&quot; +++ config.tomlを編集する。内容は以下。 baseurl = &quot;http://ged1959.github.io/python/&quot; languageCode = &quot;ja-jp&quot; title = &quot;My Memo&quot; canonifyurls = true postを一つ作る。 hugo new post/first.md 上に、何かを書き込んで、以下で動作テスト。 hugo server -t angels-ladder -D Githubにアップする アップロード用のデータを作成する。記事中のdraft = trueはdraft = falseとする。コマンドでもいいらしい。 hugo undraft content\post\first.md で、作成。 hugo -t angels-ladder publicのフォルダができる。中のindex.htmlをクリックすると、サイトが見える、という訳ではない。たぶん、上でpathを決めたから。で、publicへ。 cd public/ gitにする。 git init リモートリポジトリを指定する。 git remote add origin https://github.com/ged1959/python.git gh-pagesのbranchを作成し、branchを移動する。 git checkout -b gh-pages 続いて、お決まりの手順。 git add ....</div>
-  </a>
-</article>
-
-    
-  </div>
-
+<html lang="ja-jp">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    Hugo | ぐだぐだ版 python memo
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ged1959.github.io/python/tags/hugo/"/>
+
+  
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/sanitize.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/responsive.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/highlight_monokai.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/theme.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/custom.css">
+  
+  
+  <link href="http://ged1959.github.io/python/index.xml" rel="alternate" type="application/rss+xml" title="ぐだぐだ版 python memo" />
+  <link href="http://ged1959.github.io/python/index.xml" rel="feed" type="application/rss+xml" title="ぐだぐだ版 python memo" />
+
+  
   
 
 
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://ged1959.github.io/python/">ぐだぐだ版 python memo</a></h1>
+        
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="list" role="main">
+    <div class="article-header light-gray"><h1>#Hugo</h1></div>
+    
+    <div class="summary">
+      <h2><a href="http://ged1959.github.io/python/post/first_memo/">このメモの作成方法 </a></h2>
+      <div class="meta">
+        Mar 21, 2016 &nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/hugo">hugo</a>&nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/how-to">how-to</a>&nbsp;
+        
+      </div>
+    </div>
+    
+  </main>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      
+      
+    </div>
+  </footer>
+
 
 </div>
-<footer class="site">
-  <p>&copy; 2016 ぐだぐだ版 python memo</p>
-  <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
-  <p>Theme <a href="https://github.com/dim0627/hugo_theme_harb" target="_blank">Harb</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
-</footer>
 
-</div>
+<script src="http://ged1959.github.io/python/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
 
 </body>
 </html>
