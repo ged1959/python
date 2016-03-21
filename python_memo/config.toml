@@ -1,0 +1,4 @@
+baseurl = "http://ged1959.github.io/python/"
+languageCode = "ja-jp"
+title = "My Memo"
+canonifyurls = true
