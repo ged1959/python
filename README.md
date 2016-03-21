@@ -61,3 +61,8 @@ Visual Studio Codeで使えるか？
 - [Pythonや機械学習、そして言語の競争について – 極めて主観的な見地から | コンピュータサイエンス | POSTD](http://postd.cc/python-machine-learning-and-language-wars-a-highly-subjective-point-of-view/)
 - [Python入門](http://www.tohoho-web.com/python/index.html)
 - [[python] 細かすぎて伝わりにくい、Pythonの本当の落とし穴10選 | 私の小岩ホッチキス](http://kwatch.houkagoteatime.net/blog/2014/08/24/python-pitfalls/)
+
+python勉強のサイト作った
+----------------------------
+gh-pagesなのだけど。以下。
+[ぐだぐだ版 python memo](http://ged1959.github.io/python/)
