@@ -19,9 +19,9 @@
 
 &lt;p&gt;READMEに書いた通り、pythonの勉強用のメモ。忘れっぽいので。&lt;/p&gt;
 
-&lt;h2 id=&#34;このサイトの作成法も:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;このサイトの作成法も&lt;/h2&gt;
+&lt;h2 id=&#34;このサイトの作成法:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;このサイトの作成法&lt;/h2&gt;
 
-&lt;p&gt;やっぱり忘れるだろうから、以下に。&lt;/p&gt;
+&lt;p&gt;hugoで作った。こちらも、やっぱり忘れるだろうから、以下に。&lt;/p&gt;
 
 &lt;h3 id=&#34;localにサイトを作る:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;localにサイトを作る&lt;/h3&gt;
 

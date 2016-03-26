@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    基礎中の基礎はこちらで | ぐだぐだ版 python memo
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ged1959.github.io/python/post/dot_install/"/>
+
+  
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/sanitize.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/responsive.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/highlight_monokai.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/theme.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/custom.css">
+  
+  
+  <link href="http://ged1959.github.io/python/index.xml" rel="alternate" type="application/rss+xml" title="ぐだぐだ版 python memo" />
+  <link href="http://ged1959.github.io/python/index.xml" rel="feed" type="application/rss+xml" title="ぐだぐだ版 python memo" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://ged1959.github.io/python/">ぐだぐだ版 python memo</a></h1>
+        
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>基礎中の基礎はこちらで</h1>
+      <div class="meta">
+        Mar 21, 2016 &nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/%E3%83%89%E3%83%83%E3%83%88%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">ドットインストール</a>&nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/"></a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p>基礎中の基礎は、いつもお世話になっている「<a href="http://dotinstall.com/">ドットインストール</a>」さんで学ぶ。「<a href="http://dotinstall.com/lessons/basic_python_v2">Python入門 (全24回) - プログラミングならドットインストール</a>」から。</p>
+
+<h2 id="データ型-none:1fc9a072d3fdaf982f21604947550d10">データ型、None</h2>
+
+<p>相当に基礎なのだろうけど、<a href="http://dotinstall.com/lessons/basic_python_v2/26003">#03 変数とデータ型について | Python入門 - プログラミングならドットインストール</a>の部分。ソースというか、解説メモにある<code>None</code>が謎である。</p>
+
+<pre><code># coding: UTF-8
+# 変数（データにつけるラベル）
+
+# データ型
+# 数値
+# 真偽値 True False
+# None
+# 関数・オブジェクト
+# 要素が並んだもの
+# - 文字列：文字が並んだもの
+# - リスト：データが並んだもの
+# - タブル：データが並んだもの（変更ができない）
+# - セット：データが並んだもの（重複を許さない）
+# - 辞書：キーと値がペア
+
+msg = &quot;hello world&quot; 
+print msg
+</code></pre>
+
+<p>ので、調べる。というか、ググる。まず出てきたのが、「<a href="http://monmon.hateblo.jp/entry/20110214/1297710749">PythonではNoneの比較は==ではなくisを使う - こんにちはこんにちはmonmonです！</a>」と、目を引くのが出てきた。あと、「<a href="http://d.hatena.ne.jp/artgear/20131018/three_python_tricks">Pythonを勉強していて「こういう書き方があったのか」と思ったことを3つ - 主にプログラムを勉強するブログ</a>」とか。なんじゃ？そもそも、<code>None</code>が意味不明なんだから、まだ、自分には早い。で、後の方のリンクに、以下のような比較構文があると。</p>
+
+<pre><code>if 1 &lt; a &lt; 5:
+    print u'aは1から5の間'
+</code></pre>
+
+<p>ホンマ？試す。<code>test0321.py</code>に。便利だ。また寄り道だが、「<a href="http://www.pythonweb.jp/tutorial/if/index3.html">真(true)と偽(false) - 条件分岐 - Python入門</a>」には、以下のコード。</p>
+
+<pre><code>print &quot;True = &quot;, True
+print &quot;False = &quot;, False
+
+print &quot;True + 3 = &quot;, True + 3
+
+if True:
+  print &quot;Always True&quot;
+</code></pre>
+
+<p>でも、<code>print hoge</code>はダメ。当たり前だけど。</p>
+
+<p>で、上を見ていると気が付くのは、<code>print</code>という関数は奥が深いみたい、ということで、調べてみたら、以下のようなサイトに。「<a href="http://www.lifewithpython.com/2013/08/print-statement.html">Pythonのprint文 - Life with Python</a>」「<a href="http://qiita.com/yuukiclass/items/760b9cd85f503fd03fbd">pythonのprint内で変数に代入されている数字や文字を表示する - Qiita</a>」「<a href="http://www.python-izm.com/contents/basis/print.shtml">print文 - Python入門から応用までの学習サイト</a>」。</p>
+
+<p>寄り道しすぎだ。今は、<code>None</code>。「<a href="http://diveintopython3-ja.rdy.jp/native-datatypes.html">ネイティブデータ型 - Dive Into Python 3 日本語版</a>」には、こんな説明。なんだか哲学的。</p>
+
+<blockquote>
+<p>NoneはPythonの特別な定数で、これはnull値（無効値）である。NoneはFalseではないし、0でもないし、空の文字列でもない。NoneをNone以外の値と比較すると、常にFalseが返る。</p>
+</blockquote>
+
+<p>で、また寄り道だけど、このサイトは、「<a href="http://diveintopython3-ja.rdy.jp/whats-new.html">Dive Into Python 3 で新しくなったこと</a>」＜「<a href="http://diveintopython3-ja.rdy.jp/index.html">Dive Into Python 3 日本語版</a>」なっていて、前者に以下の記述。いつか見てみよう。</p>
+
+<blockquote>
+<p>Python 3には2to3というスクリプトが付属している。これを学び、これを愛し、これを使おう。2to3を使ってコードをPython 3へ移植するは、2to3で自動的に何が修正できるのかを全て集めたレファレンスとなっている。その多くは構文の変更なので（printは今や関数であり、<code>x</code>はもう使えない、などなど）、この章はPython 3でなされた多くの構文の変更について学ぶ良い足がかりになる。</p>
+</blockquote>
+
+<p>「<a href="http://www.geocities.jp/m_hiroi/light/python02.html">お気楽 Python プログラミング入門</a>」には、</p>
+
+<blockquote>
+<p>Python の場合、関数の返り値は return を使って返します。これはＣ言語と同じです。Perl のように、ブロックの最後で実行された処理結果が返り値とはなりません。return のない関数は None というデータを返します。None は Python の中でただ一つしか存在しない特別なデータ型で、値がないことや偽 (False) を表すために使用されます。</p>
+</blockquote>
+
+<p>で、結論。必要になったら、勉強しよう。</p>
+
+<h2 id="複素数とは:1fc9a072d3fdaf982f21604947550d10">複素数とは</h2>
+
+<p>次に、「<a href="http://dotinstall.com/lessons/basic_python_v2/26004">#04 数値を使ってみよう | Python入門 - プログラミングならドットインストール</a>」。自分で勉強して、という「複素数」だ。</p>
+
+<pre><code># coding: UTF-8
+# 数値
+# 整数、小数、複素数
+
+# 演算子 + - * / // % **
+print 10 * 5 # 50
+print 10 // 3 # 3
+print 10 % 3 # 1
+print 2 ** 3 # 8
+
+# 整数と小数の演算 → 小数
+print 5 + 2.0
+
+# 整数同士の割り算 → 切り捨ての整数
+print 10 / 3.0
+</code></pre>
+
+<p>さっそく、ググる。うひゃ、すぐ出た。「<a href="http://qiita.com/shuhei/items/f5cf6c83fcfb5dd24c2d">Python で複素数を扱う - Qiita</a>」。感動ものとあるので、試す。</p>
+
+<pre><code>print((1 + 2j) * (3 + 4j))
+# (-5+10j)
+print((1 + 2j) / (3 + 4j))
+# (0.44+0.08j))
+</code></pre>
+
+<p>ホンマ、感動や。</p>
+
+      
+      
+      
+    </article>
+    
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://ged1959.github.io/python/post/first_memo/" rel="prev">このメモの作成方法</a></span>
+    
+    
+      <span class="next"><a href="http://ged1959.github.io/python/post/zen/" rel="next">zenという思想？</a> &rarr;</span>
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      
+      
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="http://ged1959.github.io/python/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+</body>
+</html>
+

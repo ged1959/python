@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zen on ぐだぐだ版 python memo</title>
+    <link>http://ged1959.github.io/python/tags/zen/</link>
+    <description>Recent content in Zen on ぐだぐだ版 python memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 26 Mar 2016 15:44:25 +0900</lastBuildDate>
+    <atom:link href="http://ged1959.github.io/python/tags/zen/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>zenという思想？</title>
+      <link>http://ged1959.github.io/python/post/zen/</link>
+      <pubDate>Sat, 26 Mar 2016 15:44:25 +0900</pubDate>
+      
+      <guid>http://ged1959.github.io/python/post/zen/</guid>
+      <description>
+
+&lt;p&gt;「超」入門。p.38。&lt;/p&gt;
+
+&lt;h2 id=&#34;コーディング規約:81d41a8a13b907c9f2bac0ed4482cddd&#34;&gt;コーディング規約&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;import this
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#39;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#39;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&#39;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#39;s do more of those!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;なるほど。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

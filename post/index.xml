@@ -6,8 +6,157 @@
     <description>Recent content in Posts on ぐだぐだ版 python memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 21 Mar 2016 15:14:20 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 26 Mar 2016 15:44:25 +0900</lastBuildDate>
     <atom:link href="http://ged1959.github.io/python/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>zenという思想？</title>
+      <link>http://ged1959.github.io/python/post/zen/</link>
+      <pubDate>Sat, 26 Mar 2016 15:44:25 +0900</pubDate>
+      
+      <guid>http://ged1959.github.io/python/post/zen/</guid>
+      <description>
+
+&lt;p&gt;「超」入門。p.38。&lt;/p&gt;
+
+&lt;h2 id=&#34;コーディング規約:81d41a8a13b907c9f2bac0ed4482cddd&#34;&gt;コーディング規約&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt;import this
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren&#39;t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you&#39;re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it&#39;s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let&#39;s do more of those!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;なるほど。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>基礎中の基礎はこちらで</title>
+      <link>http://ged1959.github.io/python/post/dot_install/</link>
+      <pubDate>Mon, 21 Mar 2016 16:33:26 +0900</pubDate>
+      
+      <guid>http://ged1959.github.io/python/post/dot_install/</guid>
+      <description>
+
+&lt;p&gt;基礎中の基礎は、いつもお世話になっている「&lt;a href=&#34;http://dotinstall.com/&#34;&gt;ドットインストール&lt;/a&gt;」さんで学ぶ。「&lt;a href=&#34;http://dotinstall.com/lessons/basic_python_v2&#34;&gt;Python入門 (全24回) - プログラミングならドットインストール&lt;/a&gt;」から。&lt;/p&gt;
+
+&lt;h2 id=&#34;データ型-none:1fc9a072d3fdaf982f21604947550d10&#34;&gt;データ型、None&lt;/h2&gt;
+
+&lt;p&gt;相当に基礎なのだろうけど、&lt;a href=&#34;http://dotinstall.com/lessons/basic_python_v2/26003&#34;&gt;#03 変数とデータ型について | Python入門 - プログラミングならドットインストール&lt;/a&gt;の部分。ソースというか、解説メモにある&lt;code&gt;None&lt;/code&gt;が謎である。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# coding: UTF-8
+# 変数（データにつけるラベル）
+
+# データ型
+# 数値
+# 真偽値 True False
+# None
+# 関数・オブジェクト
+# 要素が並んだもの
+# - 文字列：文字が並んだもの
+# - リスト：データが並んだもの
+# - タブル：データが並んだもの（変更ができない）
+# - セット：データが並んだもの（重複を許さない）
+# - 辞書：キーと値がペア
+
+msg = &amp;quot;hello world&amp;quot; 
+print msg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ので、調べる。というか、ググる。まず出てきたのが、「&lt;a href=&#34;http://monmon.hateblo.jp/entry/20110214/1297710749&#34;&gt;PythonではNoneの比較は==ではなくisを使う - こんにちはこんにちはmonmonです！&lt;/a&gt;」と、目を引くのが出てきた。あと、「&lt;a href=&#34;http://d.hatena.ne.jp/artgear/20131018/three_python_tricks&#34;&gt;Pythonを勉強していて「こういう書き方があったのか」と思ったことを3つ - 主にプログラムを勉強するブログ&lt;/a&gt;」とか。なんじゃ？そもそも、&lt;code&gt;None&lt;/code&gt;が意味不明なんだから、まだ、自分には早い。で、後の方のリンクに、以下のような比較構文があると。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if 1 &amp;lt; a &amp;lt; 5:
+    print u&#39;aは1から5の間&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ホンマ？試す。&lt;code&gt;test0321.py&lt;/code&gt;に。便利だ。また寄り道だが、「&lt;a href=&#34;http://www.pythonweb.jp/tutorial/if/index3.html&#34;&gt;真(true)と偽(false) - 条件分岐 - Python入門&lt;/a&gt;」には、以下のコード。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;print &amp;quot;True = &amp;quot;, True
+print &amp;quot;False = &amp;quot;, False
+
+print &amp;quot;True + 3 = &amp;quot;, True + 3
+
+if True:
+  print &amp;quot;Always True&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;でも、&lt;code&gt;print hoge&lt;/code&gt;はダメ。当たり前だけど。&lt;/p&gt;
+
+&lt;p&gt;で、上を見ていると気が付くのは、&lt;code&gt;print&lt;/code&gt;という関数は奥が深いみたい、ということで、調べてみたら、以下のようなサイトに。「&lt;a href=&#34;http://www.lifewithpython.com/2013/08/print-statement.html&#34;&gt;Pythonのprint文 - Life with Python&lt;/a&gt;」「&lt;a href=&#34;http://qiita.com/yuukiclass/items/760b9cd85f503fd03fbd&#34;&gt;pythonのprint内で変数に代入されている数字や文字を表示する - Qiita&lt;/a&gt;」「&lt;a href=&#34;http://www.python-izm.com/contents/basis/print.shtml&#34;&gt;print文 - Python入門から応用までの学習サイト&lt;/a&gt;」。&lt;/p&gt;
+
+&lt;p&gt;寄り道しすぎだ。今は、&lt;code&gt;None&lt;/code&gt;。「&lt;a href=&#34;http://diveintopython3-ja.rdy.jp/native-datatypes.html&#34;&gt;ネイティブデータ型 - Dive Into Python 3 日本語版&lt;/a&gt;」には、こんな説明。なんだか哲学的。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NoneはPythonの特別な定数で、これはnull値（無効値）である。NoneはFalseではないし、0でもないし、空の文字列でもない。NoneをNone以外の値と比較すると、常にFalseが返る。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;で、また寄り道だけど、このサイトは、「&lt;a href=&#34;http://diveintopython3-ja.rdy.jp/whats-new.html&#34;&gt;Dive Into Python 3 で新しくなったこと&lt;/a&gt;」＜「&lt;a href=&#34;http://diveintopython3-ja.rdy.jp/index.html&#34;&gt;Dive Into Python 3 日本語版&lt;/a&gt;」なっていて、前者に以下の記述。いつか見てみよう。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Python 3には2to3というスクリプトが付属している。これを学び、これを愛し、これを使おう。2to3を使ってコードをPython 3へ移植するは、2to3で自動的に何が修正できるのかを全て集めたレファレンスとなっている。その多くは構文の変更なので（printは今や関数であり、&lt;code&gt;x&lt;/code&gt;はもう使えない、などなど）、この章はPython 3でなされた多くの構文の変更について学ぶ良い足がかりになる。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;「&lt;a href=&#34;http://www.geocities.jp/m_hiroi/light/python02.html&#34;&gt;お気楽 Python プログラミング入門&lt;/a&gt;」には、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Python の場合、関数の返り値は return を使って返します。これはＣ言語と同じです。Perl のように、ブロックの最後で実行された処理結果が返り値とはなりません。return のない関数は None というデータを返します。None は Python の中でただ一つしか存在しない特別なデータ型で、値がないことや偽 (False) を表すために使用されます。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;で、結論。必要になったら、勉強しよう。&lt;/p&gt;
+
+&lt;h2 id=&#34;複素数とは:1fc9a072d3fdaf982f21604947550d10&#34;&gt;複素数とは&lt;/h2&gt;
+
+&lt;p&gt;次に、「&lt;a href=&#34;http://dotinstall.com/lessons/basic_python_v2/26004&#34;&gt;#04 数値を使ってみよう | Python入門 - プログラミングならドットインストール&lt;/a&gt;」。自分で勉強して、という「複素数」だ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# coding: UTF-8
+# 数値
+# 整数、小数、複素数
+
+# 演算子 + - * / // % **
+print 10 * 5 # 50
+print 10 // 3 # 3
+print 10 % 3 # 1
+print 2 ** 3 # 8
+
+# 整数と小数の演算 → 小数
+print 5 + 2.0
+
+# 整数同士の割り算 → 切り捨ての整数
+print 10 / 3.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;さっそく、ググる。うひゃ、すぐ出た。「&lt;a href=&#34;http://qiita.com/shuhei/items/f5cf6c83fcfb5dd24c2d&#34;&gt;Python で複素数を扱う - Qiita&lt;/a&gt;」。感動ものとあるので、試す。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;print((1 + 2j) * (3 + 4j))
+# (-5+10j)
+print((1 + 2j) / (3 + 4j))
+# (0.44+0.08j))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ホンマ、感動や。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>このメモの作成方法</title>
@@ -19,9 +168,9 @@
 
 &lt;p&gt;READMEに書いた通り、pythonの勉強用のメモ。忘れっぽいので。&lt;/p&gt;
 
-&lt;h2 id=&#34;このサイトの作成法も:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;このサイトの作成法も&lt;/h2&gt;
+&lt;h2 id=&#34;このサイトの作成法:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;このサイトの作成法&lt;/h2&gt;
 
-&lt;p&gt;やっぱり忘れるだろうから、以下に。&lt;/p&gt;
+&lt;p&gt;hugoで作った。こちらも、やっぱり忘れるだろうから、以下に。&lt;/p&gt;
 
 &lt;h3 id=&#34;localにサイトを作る:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;localにサイトを作る&lt;/h3&gt;
 
