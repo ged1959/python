@@ -9,13 +9,12 @@ title = "このメモの作成方法"
 
 READMEに書いた通り、pythonの勉強用のメモ。忘れっぽいので。
 
-## このサイトの作成法も
+## このサイトの作成法
 
-やっぱり忘れるだろうから、以下に。
+hugoで作った。こちらも、やっぱり忘れるだろうから、以下に。
 
 ### localにサイトを作る
 まず、サイトの基本を作成。
-
 ```
 hugo new site python_memo
 ```
@@ -24,7 +23,6 @@ hugo new site python_memo
 mkdir themes
 ```
 テーマをクローンする。（作者に感謝！！）
-
 ```
 git clone https://github.com/tanksuzuki/angels-ladder
 ```
