@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>超入門 on ぐだぐだ版 python memo</title>
+    <link>http://ged1959.github.io/python/tags/%E8%B6%85%E5%85%A5%E9%96%80/</link>
+    <description>Recent content in 超入門 on ぐだぐだ版 python memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 27 Mar 2016 11:42:06 +0900</lastBuildDate>
+    <atom:link href="http://ged1959.github.io/python/tags/%E8%B6%85%E5%85%A5%E9%96%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>date</title>
+      <link>http://ged1959.github.io/python/post/howtodate/</link>
+      <pubDate>Sun, 27 Mar 2016 11:42:06 +0900</pubDate>
+      
+      <guid>http://ged1959.github.io/python/post/howtodate/</guid>
+      <description>
+
+&lt;p&gt;つまづいたので。それにしても、なんで「超」入門は、コマンドライン入力ばかりなの？　バグがあると、全部入力し直さなくてはいけなくなる。面倒だなぁ。この件も、一体なぜなのか？&lt;/p&gt;
+
+&lt;h2 id=&#34;日付の表示:26894f48f2b47b2b978e3b6ec280820a&#34;&gt;日付の表示&lt;/h2&gt;
+
+&lt;p&gt;ここに書いた。&lt;code&gt;chou0327.py&lt;/code&gt;。ふーっ。一応、5つのどの方法でも、&lt;code&gt;2016年3月27日&lt;/code&gt;と出る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# coding: utf-8
+# 「超」入門。p.163
+
+&#39;&#39;&#39;
+このページのコードはうまくいかない。これ。python2、3のどちらでも。
+
+&amp;gt;&amp;gt;&amp;gt; today.strftime(&#39;%Y年%m月%d日&#39;)
+
+エラーは以下。
+
+&amp;gt;&amp;gt;&amp;gt; today.strftime(&#39;%Y年%m月%d日&#39;)
+Traceback (most recent call last):
+  File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt;
+UnicodeEncodeError: &#39;locale&#39; codec can&#39;t encode character &#39;\u5e74&#39; in position 2: Il
+legal byte sequence
+
+考えられること。==&amp;gt; strftimeの使い方のミス？引数の指定方法？
+
+いずれにせよ、年月日での表示は必須（になる可能性がある）。どんくさい方法でも試しておく。
+&#39;&#39;&#39;
+
+# 1. たぶん、最もどんくさい。
+from datetime import date
+date.today()
+kyou = date.today()
+kyounen = str(kyou.year)
+kyoutuki = str(kyou.month)
+kyoubi = str(kyou.day)
+print (kyounen+&amp;quot;年&amp;quot;+kyoutuki+&amp;quot;月&amp;quot;+kyoubi+&amp;quot;日&amp;quot;)
+
+# 2. もっとコンパクトにならんのか。
+print (&#39;{0}年{1}月{2}日&#39;.format(kyounen, kyoutuki, kyoubi))
+
+# 3. もっと、もっと。
+print (&#39;{0}年{1}月{2}日&#39;.format(kyou.year, kyou.month, kyou.day))
+
+# 4. もっと、もっと、もっと。これなら2行になるが…。
+print (&#39;{0}年{1}月{2}日&#39;.format(date.today().year, date.today().month, date.today().day))
+
+# 5. 別の方法
+print (str(kyou.year)+&amp;quot;年&amp;quot;+str(kyou.month)+&amp;quot;月&amp;quot;+str(kyou.day)+&amp;quot;日&amp;quot;)
+
+# でも、どれもどんくさい。いい方法はないのか。
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    date | ぐだぐだ版 python memo
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ged1959.github.io/python/post/howtodate/"/>
+
+  
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/sanitize.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/responsive.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/highlight_monokai.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/theme.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/custom.css">
+  
+  
+  <link href="http://ged1959.github.io/python/index.xml" rel="alternate" type="application/rss+xml" title="ぐだぐだ版 python memo" />
+  <link href="http://ged1959.github.io/python/index.xml" rel="feed" type="application/rss+xml" title="ぐだぐだ版 python memo" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://ged1959.github.io/python/">ぐだぐだ版 python memo</a></h1>
+        
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>date</h1>
+      <div class="meta">
+        Mar 27, 2016 &nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/date">date</a>&nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/%E8%B6%85%E5%85%A5%E9%96%80">「超」入門</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p>つまづいたので。それにしても、なんで「超」入門は、コマンドライン入力ばかりなの？　バグがあると、全部入力し直さなくてはいけなくなる。面倒だなぁ。この件も、一体なぜなのか？</p>
+
+<h2 id="日付の表示:26894f48f2b47b2b978e3b6ec280820a">日付の表示</h2>
+
+<p>ここに書いた。<code>chou0327.py</code>。ふーっ。一応、5つのどの方法でも、<code>2016年3月27日</code>と出る。</p>
+
+<pre><code># coding: utf-8
+# 「超」入門。p.163
+
+'''
+このページのコードはうまくいかない。これ。python2、3のどちらでも。
+
+&gt;&gt;&gt; today.strftime('%Y年%m月%d日')
+
+エラーは以下。
+
+&gt;&gt;&gt; today.strftime('%Y年%m月%d日')
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+UnicodeEncodeError: 'locale' codec can't encode character '\u5e74' in position 2: Il
+legal byte sequence
+
+考えられること。==&gt; strftimeの使い方のミス？引数の指定方法？
+
+いずれにせよ、年月日での表示は必須（になる可能性がある）。どんくさい方法でも試しておく。
+'''
+
+# 1. たぶん、最もどんくさい。
+from datetime import date
+date.today()
+kyou = date.today()
+kyounen = str(kyou.year)
+kyoutuki = str(kyou.month)
+kyoubi = str(kyou.day)
+print (kyounen+&quot;年&quot;+kyoutuki+&quot;月&quot;+kyoubi+&quot;日&quot;)
+
+# 2. もっとコンパクトにならんのか。
+print ('{0}年{1}月{2}日'.format(kyounen, kyoutuki, kyoubi))
+
+# 3. もっと、もっと。
+print ('{0}年{1}月{2}日'.format(kyou.year, kyou.month, kyou.day))
+
+# 4. もっと、もっと、もっと。これなら2行になるが…。
+print ('{0}年{1}月{2}日'.format(date.today().year, date.today().month, date.today().day))
+
+# 5. 別の方法
+print (str(kyou.year)+&quot;年&quot;+str(kyou.month)+&quot;月&quot;+str(kyou.day)+&quot;日&quot;)
+
+# でも、どれもどんくさい。いい方法はないのか。
+</code></pre>
+
+      
+      
+      
+    </article>
+    
+
+
+<script type="text/javascript">
+     
+    var disqus_shortname = '';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://ged1959.github.io/python/post/zen/" rel="prev">zenという思想？</a></span>
+    
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      
+      
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="http://ged1959.github.io/python/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+</body>
+</html>
+
