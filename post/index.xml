@@ -6,8 +6,31 @@
     <description>Recent content in Posts on ぐだぐだ版 python memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 27 Mar 2016 11:42:06 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 27 Mar 2016 12:58:18 +0900</lastBuildDate>
     <atom:link href="http://ged1959.github.io/python/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>file_objectの日本語とか</title>
+      <link>http://ged1959.github.io/python/post/file_object/</link>
+      <pubDate>Sun, 27 Mar 2016 12:58:18 +0900</pubDate>
+      
+      <guid>http://ged1959.github.io/python/post/file_object/</guid>
+      <description>
+
+&lt;p&gt;改めて、「超」入門は、説明不足だなぁ。自分で調べろ、という励ましということで。で、今回は、file_object。p.183の当たり。&lt;/p&gt;
+
+&lt;h2 id=&#34;日本語のファイル:ac620a139cc404435d5976b4f587c7ae&#34;&gt;日本語のファイル&lt;/h2&gt;
+
+&lt;p&gt;英語なら、「超」の通りなのだけど、日本語はだめ。エラーが続出する。
+答え。==&amp;gt; &lt;a href=&#34;http://news.mynavi.jp/series/python/014/&#34;&gt;Pythonで学ぶ 基礎からのプログラミング入門 (14) Pythonで日本語を扱うには? - 文字コードについて理解しよう | マイナビニュース&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;つまり、&lt;code&gt;open()&lt;/code&gt;じゃなくて、&lt;code&gt;codecs.open()&lt;/code&gt;を使う、と。&lt;code&gt;import codecs&lt;/code&gt;のあとで。&lt;/p&gt;
+
+&lt;h2 id=&#34;外部ライブラリ:ac620a139cc404435d5976b4f587c7ae&#34;&gt;外部ライブラリ&lt;/h2&gt;
+
+&lt;p&gt;いろんな外部ライブラリ ==&amp;gt; &lt;a href=&#34;https://pypi.python.org/pypi&#34;&gt;PyPI - the Python Package Index : Python Package Index&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>date</title>

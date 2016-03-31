@@ -6,7 +6,7 @@
   
   <meta charset="UTF-8">
   <title>
-    date | ぐだぐだ版 python memo
+    file_objectの日本語とか | ぐだぐだ版 python memo
   </title>
 
 
@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
 
   
-  <link rel="canonical" href="http://ged1959.github.io/python/post/howtodate/"/>
+  <link rel="canonical" href="http://ged1959.github.io/python/post/file_object/"/>
 
   
   <link rel="stylesheet" href="http://ged1959.github.io/python/css/sanitize.css">
@@ -60,69 +60,31 @@
   
   <main id="single" role="main">
     <div class="article-header">
-      <h1>date</h1>
+      <h1>file_objectの日本語とか</h1>
       <div class="meta">
         Mar 27, 2016 &nbsp;
         
-          #<a href="http://ged1959.github.io/python/tags/date">date</a>&nbsp;
-        
           #<a href="http://ged1959.github.io/python/tags/%E8%B6%85%E5%85%A5%E9%96%80">「超」入門</a>&nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/file_object">file_object</a>&nbsp;
         
       </div>
     </div>
     <article>
       
 
-<p>つまづいたので。それにしても、なんで「超」入門は、コマンドライン入力ばかりなの？　バグがあると、全部入力し直さなくてはいけなくなる。面倒だなぁ。この件も、一体なぜなのか？</p>
+<p>改めて、「超」入門は、説明不足だなぁ。自分で調べろ、という励ましということで。で、今回は、file_object。p.183の当たり。</p>
 
-<h2 id="日付の表示:26894f48f2b47b2b978e3b6ec280820a">日付の表示</h2>
+<h2 id="日本語のファイル:ac620a139cc404435d5976b4f587c7ae">日本語のファイル</h2>
 
-<p>ここに書いた。<code>chou0327.py</code>。ふーっ。一応、5つのどの方法でも、<code>2016年3月27日</code>と出る。</p>
+<p>英語なら、「超」の通りなのだけど、日本語はだめ。エラーが続出する。
+答え。==&gt; <a href="http://news.mynavi.jp/series/python/014/">Pythonで学ぶ 基礎からのプログラミング入門 (14) Pythonで日本語を扱うには? - 文字コードについて理解しよう | マイナビニュース</a></p>
 
-<pre><code># coding: utf-8
-# 「超」入門。p.163
+<p>つまり、<code>open()</code>じゃなくて、<code>codecs.open()</code>を使う、と。<code>import codecs</code>のあとで。</p>
 
-'''
-このページのコードはうまくいかない。これ。python2、3のどちらでも。
+<h2 id="外部ライブラリ:ac620a139cc404435d5976b4f587c7ae">外部ライブラリ</h2>
 
-&gt;&gt;&gt; today.strftime('%Y年%m月%d日')
-
-エラーは以下。
-
-&gt;&gt;&gt; today.strftime('%Y年%m月%d日')
-Traceback (most recent call last):
-  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
-UnicodeEncodeError: 'locale' codec can't encode character '\u5e74' in position 2: Il
-legal byte sequence
-
-考えられること。==&gt; strftimeの使い方のミス？引数の指定方法？
-
-いずれにせよ、年月日での表示は必須（になる可能性がある）。どんくさい方法でも試しておく。
-'''
-
-# 1. たぶん、最もどんくさい。
-from datetime import date
-date.today()
-kyou = date.today()
-kyounen = str(kyou.year)
-kyoutuki = str(kyou.month)
-kyoubi = str(kyou.day)
-print (kyounen+&quot;年&quot;+kyoutuki+&quot;月&quot;+kyoubi+&quot;日&quot;)
-
-# 2. もっとコンパクトにならんのか。
-print ('{0}年{1}月{2}日'.format(kyounen, kyoutuki, kyoubi))
-
-# 3. もっと、もっと。
-print ('{0}年{1}月{2}日'.format(kyou.year, kyou.month, kyou.day))
-
-# 4. もっと、もっと、もっと。これなら2行になるが…。
-print ('{0}年{1}月{2}日'.format(date.today().year, date.today().month, date.today().day))
-
-# 5. 別の方法
-print (str(kyou.year)+&quot;年&quot;+str(kyou.month)+&quot;月&quot;+str(kyou.day)+&quot;日&quot;)
-
-# でも、どれもどんくさい。いい方法はないのか。
-</code></pre>
+<p>いろんな外部ライブラリ ==&gt; <a href="https://pypi.python.org/pypi">PyPI - the Python Package Index : Python Package Index</a></p>
 
       
       
@@ -148,10 +110,8 @@ print (str(kyou.year)+&quot;年&quot;+str(kyou.month)+&quot;月&quot;+str(kyou.d
   
   <nav class="pagination-single">
     
-      <span class="previous">&larr; <a href="http://ged1959.github.io/python/post/zen/" rel="prev">zenという思想？</a></span>
+      <span class="previous">&larr; <a href="http://ged1959.github.io/python/post/howtodate/" rel="prev">date</a></span>
     
-    
-      <span class="next"><a href="http://ged1959.github.io/python/post/file_object/" rel="next">file_objectの日本語とか</a> &rarr;</span>
     
   </nav>
 
