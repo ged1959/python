@@ -77,15 +77,18 @@
 
 &lt;p&gt;外のパソコンとかでも、開発できるなら、cloud9だと思う。問題は、ファイルとか、どこに保管するか…。直接できるのだろうか。ここから。&lt;/p&gt;
 
-&lt;p&gt;まず基礎。
-- &lt;a href=&#34;http://tech.pjin.jp/blog/2015/12/03/%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3ide%e3%80%80cloud9%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%8b%e3%80%80%e3%81%9d%e3%81%ae1/&#34;&gt;オンラインIDE　Cloud9を使ってみる　その1 | TECH Projin&lt;/a&gt;
-- &lt;a href=&#34;http://tech.pjin.jp/blog/2015/12/14/%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3ide%e3%80%80cloud9%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%8b%e3%80%80%e3%81%9d%e3%81%ae2/&#34;&gt;オンラインIDE　Cloud9を使ってみる　その2 | TECH Projin&lt;/a&gt; ==&amp;gt; 「驚きの機能」&amp;gt;&amp;gt;「自動の「更新履歴管理」機能」
-- &lt;a href=&#34;http://techacademy.jp/magazine/6168&#34;&gt;プログラミングの開発環境に便利！Cloud9の使い方 | TechAcademyマガジン&lt;/a&gt; ==&amp;gt; WPもできるらしい。簡単。
-- &lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-first-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(前篇) | 株式会社イテレイティブ&lt;/a&gt;
-- &lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-second-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(中篇) | 株式会社イテレイティブ&lt;/a&gt;
-- &lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-third-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(後篇) | 株式会社イテレイティブ&lt;/a&gt; ==&amp;gt; 「作業を中断する場合には「File」から「Save」を行ってから、上部メニューの「Cloud9」から「Quit Cloud9」を選んでクリックすると、ワークスペース画面に切り替わります」。MySQLも。
-- &lt;a href=&#34;http://qiita.com/ao_love/items/31b660ab53bee959c940&#34;&gt;Cloud9でMySQLを使う - Qiita&lt;/a&gt;
-- &lt;a href=&#34;https://docs.c9.io/v1.0/docs/setting-up-mysql&#34;&gt;Setting Up MySQL · Cloud9&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;まず基礎。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://tech.pjin.jp/blog/2015/12/03/%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3ide%e3%80%80cloud9%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%8b%e3%80%80%e3%81%9d%e3%81%ae1/&#34;&gt;オンラインIDE　Cloud9を使ってみる　その1 | TECH Projin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tech.pjin.jp/blog/2015/12/14/%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3ide%e3%80%80cloud9%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%8b%e3%80%80%e3%81%9d%e3%81%ae2/&#34;&gt;オンラインIDE　Cloud9を使ってみる　その2 | TECH Projin&lt;/a&gt; ==&amp;gt; 「驚きの機能」&amp;gt;&amp;gt;「自動の「更新履歴管理」機能」&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://techacademy.jp/magazine/6168&#34;&gt;プログラミングの開発環境に便利！Cloud9の使い方 | TechAcademyマガジン&lt;/a&gt; ==&amp;gt; WPもできるらしい。簡単。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-first-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(前篇) | 株式会社イテレイティブ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-second-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(中篇) | 株式会社イテレイティブ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-third-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(後篇) | 株式会社イテレイティブ&lt;/a&gt; ==&amp;gt; 「作業を中断する場合には「File」から「Save」を行ってから、上部メニューの「Cloud9」から「Quit Cloud9」を選んでクリックすると、ワークスペース画面に切り替わります」。MySQLも。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/ao_love/items/31b660ab53bee959c940&#34;&gt;Cloud9でMySQLを使う - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.c9.io/v1.0/docs/setting-up-mysql&#34;&gt;Setting Up MySQL · Cloud9&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;パッケージまでは入るんだけど、MySQLは難しい……。&lt;/p&gt;
 
