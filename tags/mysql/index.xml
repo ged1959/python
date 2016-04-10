@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on ぐだぐだ版 python memo</title>
+    <link>http://ged1959.github.io/python/tags/mysql/</link>
+    <description>Recent content in Mysql on ぐだぐだ版 python memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 11 Apr 2016 01:33:41 +0900</lastBuildDate>
+    <atom:link href="http://ged1959.github.io/python/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>mysqlとか、その関連</title>
+      <link>http://ged1959.github.io/python/post/mysql_01/</link>
+      <pubDate>Mon, 11 Apr 2016 01:33:41 +0900</pubDate>
+      
+      <guid>http://ged1959.github.io/python/post/mysql_01/</guid>
+      <description>
+
+&lt;p&gt;データベースが必要そうなので。MySQLを入れる、と。&lt;/p&gt;
+
+&lt;p&gt;すごく動作が遅くなっている（2016.0410）けれど、東大のサイト「&lt;a href=&#34;http://gci.t.u-tokyo.ac.jp/tutorial/rdb/&#34;&gt;データベースによるデータ管理 | 東京大学グローバル消費インテリジェンス寄附講座&lt;/a&gt;」に、MySQLがいろいろ書いてあるのが理由。&lt;/p&gt;
+
+&lt;p&gt;ただ、データ分析だけなら、MySQLは、必ずしも必要ないかもしれない。&lt;/p&gt;
+
+&lt;h2 id=&#34;mysqlについて-windowsの場合:cac26e914ba27802fc197dd8f99fe198&#34;&gt;MySQLについて、Windowsの場合&lt;/h2&gt;
+
+&lt;p&gt;シンプルなインストールでいいか、と思う。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/yuann/items/6d4a93139315a485e127&#34;&gt;Windows環境でMySQL - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.codecamp.jp/mysql_install&#34;&gt;初心者のためのMySQL講座～インストール編～ | Code部&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.codecamp.jp/mysql_connect&#34;&gt;初心者のためのMySQL講座～接続編～ | Code部&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dev.mysql.com/doc/refman/5.6/ja/windows-installation-layout.html&#34;&gt;MySQL :: MySQL 5.6 リファレンスマニュアル :: 2.3.1 Microsoft Windows 上での MySQL のインストールレイアウト&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;けれど、PHPやApacheが必要とかいう人もいて…。Windowsに直接入れられる、というはびっくりだけど。初めて知った。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://kt-kiyoshi.com/wp/2015/09/19/apache_php_on_windows10_without_xampp/&#34;&gt;XAMPPを使わず、Windows10にApache&amp;amp;PHP環境を構築する | 超日記&lt;/a&gt; ==&amp;gt; 「&lt;strong&gt;XAMPPを使わず&lt;/strong&gt;」がすごい。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.webdlab.com/guide/local-mysql-4/&#34;&gt;Windows 10にMySQLをインストール – Webデザインラボ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.webdlab.com/guide/local-apache-9/&#34;&gt;Windows 10にApache2.4 VC11をインストール – Webデザインラボ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.webdlab.com/guide/local-php-9/&#34;&gt;Windows 10にPHP5.6 VC11をインストール – Webデザインラボ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ryus.co.jp/blog/windows10-php5-2-xampp/&#34;&gt;Windows10でPHP5.2が動く開発環境を作りあげるまでの紆余曲折について | RYUS blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14156312774&#34;&gt;今、windows10でPHPの開発環境を作成しています！Mysqlがmysql-5.1.43&amp;hellip; - Yahoo!知恵袋&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://kubotti.hatenablog.com/entry/2015/11/03/232014&#34;&gt;Windows10にphp 5.６インストールメモ - kubotti’s memo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wataame.sumomo.ne.jp/archives/7071&#34;&gt;Windows10(64Bit版)にApache2.4、PHP5.6をインストールする方法 | Wataame Frog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;で、あまたのインストールには、VSにC++が必要だったり、と。コンパイルするんだと。勉強にはなる。&lt;/p&gt;
+
+&lt;p&gt;でもなぁ、WindowsネイティブにApacheいるか？そんなに使うのかどうか、疑問。これならcloud9で十分な気がする。&lt;/p&gt;
+
+&lt;h2 id=&#34;データ分析:cac26e914ba27802fc197dd8f99fe198&#34;&gt;データ分析&lt;/h2&gt;
+
+&lt;p&gt;（未整理）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://myenigma.hatenablog.com/entry/2015/10/17/220353&#34;&gt;簡単にデータ解析をすることができるPythonライブラリPandas入門 - MyEnigma&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/hik0107/items/19dd2f6a4ab61ec21905&#34;&gt;Pythonでデータ分析するのに必要なツールのまとめ - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.graffe.jp/blog/2386/&#34;&gt;Python言語とは？ ～データ分析に向いているプログラミング言語～｜データ分析用語を解説 - データビジュアライズで経営を視える化する/graffe グラーフ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openbook4.me/projects/183/sections/1118&#34;&gt;環境構築 (Pythonを使ったデータ解析入門 3idea) | OpenBook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.recruit-tech.co.jp/2016/03/01/visualization_2016/&#34;&gt;分析結果を楽にカッコよく可視化する方法~2016年版~ | RECRUIT TECHNOLOGIES Member&amp;rsquo;s blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.runserver.jp/reading.html&#34;&gt;Pythonでできること — RUNSERVER WEB SITE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;おまけ:cac26e914ba27802fc197dd8f99fe198&#34;&gt;おまけ&lt;/h2&gt;
+
+&lt;p&gt;（未整理）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/ymotongpoo/python-14301992?next_slideshow=1&#34;&gt;Pythonを取り巻く開発環境 #pyconjp&lt;/a&gt;。環境を汚さない、方法が出ていた。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/who_you_me/10-32435124?qid=e3f307ee-e28f-430a-87e7-a65ad04bda8c&amp;amp;v=&amp;amp;b=&amp;amp;from_search=7&#34;&gt;10分でわかるPythonの開発環境&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;やっぱ-cloud9試す:cac26e914ba27802fc197dd8f99fe198&#34;&gt;やっぱ、cloud9試す！！&lt;/h2&gt;
+
+&lt;p&gt;外のパソコンとかでも、開発できるなら、cloud9だと思う。問題は、ファイルとか、どこに保管するか…。直接できるのだろうか。ここから。&lt;/p&gt;
+
+&lt;p&gt;まず基礎。
+- &lt;a href=&#34;http://tech.pjin.jp/blog/2015/12/03/%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3ide%e3%80%80cloud9%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%8b%e3%80%80%e3%81%9d%e3%81%ae1/&#34;&gt;オンラインIDE　Cloud9を使ってみる　その1 | TECH Projin&lt;/a&gt;
+- &lt;a href=&#34;http://tech.pjin.jp/blog/2015/12/14/%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3ide%e3%80%80cloud9%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%8b%e3%80%80%e3%81%9d%e3%81%ae2/&#34;&gt;オンラインIDE　Cloud9を使ってみる　その2 | TECH Projin&lt;/a&gt; ==&amp;gt; 「驚きの機能」&amp;gt;&amp;gt;「自動の「更新履歴管理」機能」
+- &lt;a href=&#34;http://techacademy.jp/magazine/6168&#34;&gt;プログラミングの開発環境に便利！Cloud9の使い方 | TechAcademyマガジン&lt;/a&gt; ==&amp;gt; WPもできるらしい。簡単。
+- &lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-first-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(前篇) | 株式会社イテレイティブ&lt;/a&gt;
+- &lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-second-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(中篇) | 株式会社イテレイティブ&lt;/a&gt;
+- &lt;a href=&#34;https://www.iterative.co.jp/blog/online-ide-service-cloud9-third-part/&#34;&gt;簡単にプログラミング環境が構築できる「Cloud9」の始め方(後篇) | 株式会社イテレイティブ&lt;/a&gt; ==&amp;gt; 「作業を中断する場合には「File」から「Save」を行ってから、上部メニューの「Cloud9」から「Quit Cloud9」を選んでクリックすると、ワークスペース画面に切り替わります」。MySQLも。
+- &lt;a href=&#34;http://qiita.com/ao_love/items/31b660ab53bee959c940&#34;&gt;Cloud9でMySQLを使う - Qiita&lt;/a&gt;
+- &lt;a href=&#34;https://docs.c9.io/v1.0/docs/setting-up-mysql&#34;&gt;Setting Up MySQL · Cloud9&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;パッケージまでは入るんだけど、MySQLは難しい……。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://community.c9.io/t/installing-python-packages/1611&#34;&gt;Installing Python Packages - How To - Cloud9 Community&lt;/a&gt; ==&amp;gt; markdownのパッケージ。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://uxmilk.jp/23509&#34;&gt;PythonでMySQLを操作する方法：MySQLdb | UX MILK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.python-izm.com/contents/external/mysql.shtml&#34;&gt;MySQL - Python入門から応用までの学習サイト&lt;/a&gt; ==&amp;gt; つまずき中。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ほんと、MySQLだけなら、なんとかなるんだけど…。フム。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    mysqlとか、その関連 | ぐだぐだ版 python memo
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ged1959.github.io/python/post/mysql_01/"/>
+
+  
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/sanitize.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/responsive.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/highlight_monokai.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/theme.css">
+  <link rel="stylesheet" href="http://ged1959.github.io/python/css/custom.css">
+  
+  
+  <link href="http://ged1959.github.io/python/index.xml" rel="alternate" type="application/rss+xml" title="ぐだぐだ版 python memo" />
+  <link href="http://ged1959.github.io/python/index.xml" rel="feed" type="application/rss+xml" title="ぐだぐだ版 python memo" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://ged1959.github.io/python/">ぐだぐだ版 python memo</a></h1>
+        
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>mysqlとか、その関連</h1>
+      <div class="meta">
+        Apr 11, 2016 &nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/mysql">MySQL</a>&nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/cloud9">cloud9</a>&nbsp;
+        
+          #<a href="http://ged1959.github.io/python/tags/%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90">データ分析</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p>データベースが必要そうなので。MySQLを入れる、と。</p>
+
+<p>すごく動作が遅くなっている（2016.0410）けれど、東大のサイト「<a href="http://gci.t.u-tokyo.ac.jp/tutorial/rdb/">データベースによるデータ管理 | 東京大学グローバル消費インテリジェンス寄附講座</a>」に、MySQLがいろいろ書いてあるのが理由。</p>
+
+<p>ただ、データ分析だけなら、MySQLは、必ずしも必要ないかもしれない。</p>
+
+<h2 id="mysqlについて-windowsの場合:cac26e914ba27802fc197dd8f99fe198">MySQLについて、Windowsの場合</h2>
+
+<p>シンプルなインストールでいいか、と思う。</p>
+
+<ul>
+<li><a href="http://qiita.com/yuann/items/6d4a93139315a485e127">Windows環境でMySQL - Qiita</a></li>
+<li><a href="https://blog.codecamp.jp/mysql_install">初心者のためのMySQL講座～インストール編～ | Code部</a></li>
+<li><a href="https://blog.codecamp.jp/mysql_connect">初心者のためのMySQL講座～接続編～ | Code部</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/5.6/ja/windows-installation-layout.html">MySQL :: MySQL 5.6 リファレンスマニュアル :: 2.3.1 Microsoft Windows 上での MySQL のインストールレイアウト</a></li>
+</ul>
+
+<p>けれど、PHPやApacheが必要とかいう人もいて…。Windowsに直接入れられる、というはびっくりだけど。初めて知った。</p>
+
+<ul>
+<li><a href="http://kt-kiyoshi.com/wp/2015/09/19/apache_php_on_windows10_without_xampp/">XAMPPを使わず、Windows10にApache&amp;PHP環境を構築する | 超日記</a> ==&gt; 「<strong>XAMPPを使わず</strong>」がすごい。</li>
+<li><a href="http://www.webdlab.com/guide/local-mysql-4/">Windows 10にMySQLをインストール – Webデザインラボ</a></li>
+<li><a href="http://www.webdlab.com/guide/local-apache-9/">Windows 10にApache2.4 VC11をインストール – Webデザインラボ</a></li>
+<li><a href="http://www.webdlab.com/guide/local-php-9/">Windows 10にPHP5.6 VC11をインストール – Webデザインラボ</a></li>
+<li><a href="http://ryus.co.jp/blog/windows10-php5-2-xampp/">Windows10でPHP5.2が動く開発環境を作りあげるまでの紆余曲折について | RYUS blog</a></li>
+<li><a href="http://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14156312774">今、windows10でPHPの開発環境を作成しています！Mysqlがmysql-5.1.43&hellip; - Yahoo!知恵袋</a></li>
+<li><a href="http://kubotti.hatenablog.com/entry/2015/11/03/232014">Windows10にphp 5.６インストールメモ - kubotti’s memo</a></li>
+<li><a href="http://wataame.sumomo.ne.jp/archives/7071">Windows10(64Bit版)にApache2.4、PHP5.6をインストールする方法 | Wataame Frog</a></li>
+</ul>
+
+<p>で、あまたのインストールには、VSにC++が必要だったり、と。コンパイルするんだと。勉強にはなる。</p>
+
+<p>でもなぁ、WindowsネイティブにApacheいるか？そんなに使うのかどうか、疑問。これならcloud9で十分な気がする。</p>
+
+<h2 id="データ分析:cac26e914ba27802fc197dd8f99fe198">データ分析</h2>
+
+<p>（未整理）</p>
+
+<ul>
+<li><a href="http://myenigma.hatenablog.com/entry/2015/10/17/220353">簡単にデータ解析をすることができるPythonライブラリPandas入門 - MyEnigma</a></li>
+<li><a href="http://qiita.com/hik0107/items/19dd2f6a4ab61ec21905">Pythonでデータ分析するのに必要なツールのまとめ - Qiita</a></li>
+<li><a href="http://www.graffe.jp/blog/2386/">Python言語とは？ ～データ分析に向いているプログラミング言語～｜データ分析用語を解説 - データビジュアライズで経営を視える化する/graffe グラーフ</a></li>
+<li><a href="http://openbook4.me/projects/183/sections/1118">環境構築 (Pythonを使ったデータ解析入門 3idea) | OpenBook</a></li>
+<li><a href="http://blog.recruit-tech.co.jp/2016/03/01/visualization_2016/">分析結果を楽にカッコよく可視化する方法~2016年版~ | RECRUIT TECHNOLOGIES Member&rsquo;s blog</a></li>
+<li><a href="http://www.runserver.jp/reading.html">Pythonでできること — RUNSERVER WEB SITE</a></li>
+</ul>
+
+<h2 id="おまけ:cac26e914ba27802fc197dd8f99fe198">おまけ</h2>
+
+<p>（未整理）</p>
+
+<ul>
+<li><a href="http://www.slideshare.net/ymotongpoo/python-14301992?next_slideshow=1">Pythonを取り巻く開発環境 #pyconjp</a>。環境を汚さない、方法が出ていた。</li>
+<li><a href="http://www.slideshare.net/who_you_me/10-32435124?qid=e3f307ee-e28f-430a-87e7-a65ad04bda8c&amp;v=&amp;b=&amp;from_search=7">10分でわかるPythonの開発環境</a></li>
+</ul>
+
+<h2 id="やっぱ-cloud9試す:cac26e914ba27802fc197dd8f99fe198">やっぱ、cloud9試す！！</h2>
+
+<p>外のパソコンとかでも、開発できるなら、cloud9だと思う。問題は、ファイルとか、どこに保管するか…。直接できるのだろうか。ここから。</p>
+
+<p>まず基礎。
+- <a href="http://tech.pjin.jp/blog/2015/12/03/%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3ide%e3%80%80cloud9%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%8b%e3%80%80%e3%81%9d%e3%81%ae1/">オンラインIDE　Cloud9を使ってみる　その1 | TECH Projin</a>
+- <a href="http://tech.pjin.jp/blog/2015/12/14/%e3%82%aa%e3%83%b3%e3%83%a9%e3%82%a4%e3%83%b3ide%e3%80%80cloud9%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6%e3%81%bf%e3%82%8b%e3%80%80%e3%81%9d%e3%81%ae2/">オンラインIDE　Cloud9を使ってみる　その2 | TECH Projin</a> ==&gt; 「驚きの機能」&gt;&gt;「自動の「更新履歴管理」機能」
+- <a href="http://techacademy.jp/magazine/6168">プログラミングの開発環境に便利！Cloud9の使い方 | TechAcademyマガジン</a> ==&gt; WPもできるらしい。簡単。
+- <a href="https://www.iterative.co.jp/blog/online-ide-service-cloud9-first-part/">簡単にプログラミング環境が構築できる「Cloud9」の始め方(前篇) | 株式会社イテレイティブ</a>
+- <a href="https://www.iterative.co.jp/blog/online-ide-service-cloud9-second-part/">簡単にプログラミング環境が構築できる「Cloud9」の始め方(中篇) | 株式会社イテレイティブ</a>
+- <a href="https://www.iterative.co.jp/blog/online-ide-service-cloud9-third-part/">簡単にプログラミング環境が構築できる「Cloud9」の始め方(後篇) | 株式会社イテレイティブ</a> ==&gt; 「作業を中断する場合には「File」から「Save」を行ってから、上部メニューの「Cloud9」から「Quit Cloud9」を選んでクリックすると、ワークスペース画面に切り替わります」。MySQLも。
+- <a href="http://qiita.com/ao_love/items/31b660ab53bee959c940">Cloud9でMySQLを使う - Qiita</a>
+- <a href="https://docs.c9.io/v1.0/docs/setting-up-mysql">Setting Up MySQL · Cloud9</a></p>
+
+<p>パッケージまでは入るんだけど、MySQLは難しい……。</p>
+
+<ul>
+<li><a href="https://community.c9.io/t/installing-python-packages/1611">Installing Python Packages - How To - Cloud9 Community</a> ==&gt; markdownのパッケージ。</li>
+<li><a href="http://uxmilk.jp/23509">PythonでMySQLを操作する方法：MySQLdb | UX MILK</a></li>
+<li><a href="http://www.python-izm.com/contents/external/mysql.shtml">MySQL - Python入門から応用までの学習サイト</a> ==&gt; つまずき中。</li>
+</ul>
+
+<p>ほんと、MySQLだけなら、なんとかなるんだけど…。フム。</p>
+
+      
+      
+      
+    </article>
+    
+ <aside><div id="disqus_thread"></div></aside> 
+
+<script type="text/javascript">
+     
+    var disqus_shortname = 'pythonmemo-gudaguda';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://ged1959.github.io/python/post/file_object/" rel="prev">file_objectの日本語とか</a></span>
+    
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      
+      
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="http://ged1959.github.io/python/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+</body>
+</html>
+
