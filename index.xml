@@ -37,19 +37,55 @@
 
 &lt;p&gt;これで、python2.7系でも環境設定できる。上のキャプチャ写真の上の方に、helpが出ている。これを真似た。&lt;/p&gt;
 
+&lt;h2 id=&#34;venvの使い方:658b16d50c0c6eec40d61e0af7ae1268&#34;&gt;venvの使い方&lt;/h2&gt;
+
+&lt;p&gt;これでも、pytho2.7使える、という話（&lt;a href=&#34;http://qiita.com/manzyun/items/17ea7ebd394e16935155&#34;&gt;pyvenvで別のバージョンのPythonを指定したい - Qiita&lt;/a&gt;）もあるのだけど、自分は、今のところ再現できてない。むむむ…。&lt;/p&gt;
+
+&lt;p&gt;で、こちらは、ディレクトリを管理できる。自分で作成したディレクトリの中で仮想環境が完結、してるみたい。作り方は以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;C:\Users\username\Documents&amp;gt; python -m venv venvtest&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;こんなイメージ。で、できたディレクトリごと消せば、仮想環境も削除。&lt;/p&gt;
+
+&lt;p&gt;それから動かすときは、以下のように、ディレクトリを移動してから、&lt;code&gt;activate&lt;/code&gt;とする。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;C:\Users\username\Documents\venvtest\Scripts\activate&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;virtualenvの使い方:658b16d50c0c6eec40d61e0af7ae1268&#34;&gt;virtualenvの使い方&lt;/h2&gt;
+
+&lt;p&gt;普通に仮想環境の&lt;code&gt;hoge&lt;/code&gt;を作ると、以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mkvirtualenv hoge&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;動かし方は以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;workon hoge&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;仮想環境は、&lt;code&gt;C:\Users\ged\Envs&lt;/code&gt;にある。どうしたことが、globalで動くけど……。新しいディレクトリが勝手にできてた。仮想環境を増やすと、ここに加わる。どんな仮想環境があるか、それは以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;workon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;問題は削除。二段階で。まず以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rmvirtualenv hoge&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;これで内部のファイルが消える。でも、&lt;code&gt;Envs&lt;/code&gt;の中にフォルダが残る。ので、消す。&lt;/p&gt;
+
 &lt;h2 id=&#34;その他のリンク:658b16d50c0c6eec40d61e0af7ae1268&#34;&gt;その他のリンク&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://qiita.com/nobolis/items/12a464557f2ae007e9a1&#34;&gt;Windowsでpyenvとかvirtualenvを使おうと思ったときに学んだことのメモ - Qiita&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://qiita.com/nobolis/items/6f818202c57213944eb6&#34;&gt;pyvenvをWindowsで使う - Qiita&lt;/a&gt; ==&amp;gt; pyvenvとvenvの違いが判るような。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://blog.muuny-blue.info/b3ddb7c5b10be95dbc3f9152c58becce.html&#34;&gt;pyenvとvenvでPython3開発環境を整える&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/who_you_me/10-32435124?ref=https://career.levtech.jp/guide/knowhow/article/21/?utm_source=dlvr.it&amp;amp;utm_medium=twitter&#34;&gt;10分でわかるPythonの開発環境&lt;/a&gt; ==&amp;gt; インストールの方法。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/who_you_me/10-32435124?ref=https://career.levtech.jp/guide/knowhow/article/21/?utm_source=dlvr.it&amp;amp;utm_medium=twitter&#34;&gt;10分でわかるPythonの開発環境&lt;/a&gt; ==&amp;gt; インストールの方法。&lt;strong&gt;windowsではmacとは違う。&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;以上は、基礎知識。&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/&#34;&gt;Python, Pip, virtualenv installation on Windows | timbo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/&#34;&gt;Python, Pip, virtualenv installation on Windows | timbo&lt;/a&gt; ==&amp;gt; 分かりやすい。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/_rdtr/items/5f3a9a9e2cb5a24f284e&#34;&gt;Virtualenvwrapperの導入 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ymotongpoo.hatenablog.com/entry/2012/09/03/002604&#34;&gt;Python3.3のvenvを試す - YAMAGUCHI::weblog&lt;/a&gt; ==&amp;gt; pyvenv.pyの秘密について。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

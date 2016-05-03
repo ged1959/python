@@ -91,19 +91,55 @@
 
 <p>これで、python2.7系でも環境設定できる。上のキャプチャ写真の上の方に、helpが出ている。これを真似た。</p>
 
+<h2 id="venvの使い方:658b16d50c0c6eec40d61e0af7ae1268">venvの使い方</h2>
+
+<p>これでも、pytho2.7使える、という話（<a href="http://qiita.com/manzyun/items/17ea7ebd394e16935155">pyvenvで別のバージョンのPythonを指定したい - Qiita</a>）もあるのだけど、自分は、今のところ再現できてない。むむむ…。</p>
+
+<p>で、こちらは、ディレクトリを管理できる。自分で作成したディレクトリの中で仮想環境が完結、してるみたい。作り方は以下。</p>
+
+<p><code>C:\Users\username\Documents&gt; python -m venv venvtest</code></p>
+
+<p>こんなイメージ。で、できたディレクトリごと消せば、仮想環境も削除。</p>
+
+<p>それから動かすときは、以下のように、ディレクトリを移動してから、<code>activate</code>とする。</p>
+
+<p><code>C:\Users\username\Documents\venvtest\Scripts\activate</code></p>
+
+<h2 id="virtualenvの使い方:658b16d50c0c6eec40d61e0af7ae1268">virtualenvの使い方</h2>
+
+<p>普通に仮想環境の<code>hoge</code>を作ると、以下。</p>
+
+<p><code>mkvirtualenv hoge</code></p>
+
+<p>動かし方は以下。</p>
+
+<p><code>workon hoge</code></p>
+
+<p>仮想環境は、<code>C:\Users\ged\Envs</code>にある。どうしたことが、globalで動くけど……。新しいディレクトリが勝手にできてた。仮想環境を増やすと、ここに加わる。どんな仮想環境があるか、それは以下。</p>
+
+<p><code>workon</code></p>
+
+<p>問題は削除。二段階で。まず以下。</p>
+
+<p><code>rmvirtualenv hoge</code></p>
+
+<p>これで内部のファイルが消える。でも、<code>Envs</code>の中にフォルダが残る。ので、消す。</p>
+
 <h2 id="その他のリンク:658b16d50c0c6eec40d61e0af7ae1268">その他のリンク</h2>
 
 <ul>
 <li><a href="http://qiita.com/nobolis/items/12a464557f2ae007e9a1">Windowsでpyenvとかvirtualenvを使おうと思ったときに学んだことのメモ - Qiita</a></li>
 <li><a href="http://qiita.com/nobolis/items/6f818202c57213944eb6">pyvenvをWindowsで使う - Qiita</a> ==&gt; pyvenvとvenvの違いが判るような。</li>
 <li><a href="http://blog.muuny-blue.info/b3ddb7c5b10be95dbc3f9152c58becce.html">pyenvとvenvでPython3開発環境を整える</a></li>
-<li><a href="http://www.slideshare.net/who_you_me/10-32435124?ref=https://career.levtech.jp/guide/knowhow/article/21/?utm_source=dlvr.it&amp;utm_medium=twitter">10分でわかるPythonの開発環境</a> ==&gt; インストールの方法。</li>
+<li><a href="http://www.slideshare.net/who_you_me/10-32435124?ref=https://career.levtech.jp/guide/knowhow/article/21/?utm_source=dlvr.it&amp;utm_medium=twitter">10分でわかるPythonの開発環境</a> ==&gt; インストールの方法。<strong>windowsではmacとは違う。</strong></li>
 </ul>
 
 <p>以上は、基礎知識。</p>
 
 <ul>
-<li><a href="http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/">Python, Pip, virtualenv installation on Windows | timbo</a></li>
+<li><a href="http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/">Python, Pip, virtualenv installation on Windows | timbo</a> ==&gt; 分かりやすい。</li>
+<li><a href="http://qiita.com/_rdtr/items/5f3a9a9e2cb5a24f284e">Virtualenvwrapperの導入 - Qiita</a></li>
+<li><a href="http://ymotongpoo.hatenablog.com/entry/2012/09/03/002604">Python3.3のvenvを試す - YAMAGUCHI::weblog</a> ==&gt; pyvenv.pyの秘密について。</li>
 </ul>
 
       
