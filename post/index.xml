@@ -6,8 +6,53 @@
     <description>Recent content in Posts on ぐだぐだ版 python memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 11 Apr 2016 01:33:41 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 03 May 2016 13:52:54 +0900</lastBuildDate>
     <atom:link href="http://ged1959.github.io/python/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>仮想環境の構築について</title>
+      <link>http://ged1959.github.io/python/post/virtual/</link>
+      <pubDate>Tue, 03 May 2016 13:52:54 +0900</pubDate>
+      
+      <guid>http://ged1959.github.io/python/post/virtual/</guid>
+      <description>
+
+&lt;p&gt;仮想環境を作る、と。はまった。&lt;/p&gt;
+
+&lt;h2 id=&#34;基礎知識-または-前提条件:658b16d50c0c6eec40d61e0af7ae1268&#34;&gt;基礎知識、または、前提条件&lt;/h2&gt;
+
+&lt;p&gt;まずは、ご本家かどうか、こんな説明（&lt;a href=&#34;https://packaging.python.org/en/latest/installing/#creating-virtual-environments&#34;&gt;Installing Packages — Python Packaging User Guide documentation&lt;/a&gt;）。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Currently, &lt;strong&gt;there are two viable tools&lt;/strong&gt; for creating Python virtual environments: &lt;strong&gt;virtualenv&lt;/strong&gt; and &lt;strong&gt;pyvenv&lt;/strong&gt;. pyvenv is only available in Python 3.3 &amp;amp; 3.4, and only in Python 3.4, is pip &amp;amp; setuptools installed into environments by default, whereas virtualenv supports Python 2.6 thru Python 3.4 and pip &amp;amp; setuptools are installed by default in every version.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;となると、2.7系を使うにはvirtualenvとなる。それで、その作成方法は以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/9FWF4XAOykefjlFa-4tHuHrzTbyTzVRqtK2NywWmka3lZeBVNJY_sYYKc9gpDld78c0IaK6CSGqqhtkwBZrUSXL1eCVCX8O1f_d7X1ZxpQwKwljPeJiN4V8-JgM5IA296LuPtVlHVrd4vbjzRby4mRdu9ApEjGJH1uelTa-b7a3GwtAueUS6YkQzynAqoitnuS9Jhp5ft9HzN6prqq0l2bJLwPqnrA10gW-IUnFAzskFic5rkM4zeQOG6JBIwhJL8xNDT21o8mMTXr9TVHnx0wUZK3yx_6nZ8n898Al5UWmiP2DgGaKnIQ2l3arfLCCw81vCNYTcGbfRucYzxmuv1CZ1r5X-V3G_ifmFB8JCzlWi25le88QRoQAz6Ax6s2FbKvDfJIcvexLEw5yAfBZZAgk1lCMMWgteOjJfhf3_v5bdE9dZWxspdWX53RD4dcEuuP_IZ5MeRBdQaUw8ytm0bKEWE_sEoJqcWpXcgCzX0cPALqQPzNd_c6nbnEtfAmzJ_lVQ5ga2bVOxrTqs8CGmWO2sNtw_mf4ya40-S5nza3EW_FFboPSFq_0wK2PCoc2dQlzescDr0lJv9-LjFkLM2JMuRlS49DY=w1066-h1434-no&#34; alt=&#34;&#34; style=&#34;width:60%;&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;コマンドとしては以下。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;mkvirtualenv --python=c:\Python27\python.exe hoge&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;これで、python2.7系でも環境設定できる。上のキャプチャ写真の上の方に、helpが出ている。これを真似た。&lt;/p&gt;
+
+&lt;h2 id=&#34;その他のリンク:658b16d50c0c6eec40d61e0af7ae1268&#34;&gt;その他のリンク&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/nobolis/items/12a464557f2ae007e9a1&#34;&gt;Windowsでpyenvとかvirtualenvを使おうと思ったときに学んだことのメモ - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/nobolis/items/6f818202c57213944eb6&#34;&gt;pyvenvをWindowsで使う - Qiita&lt;/a&gt; ==&amp;gt; pyvenvとvenvの違いが判るような。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.muuny-blue.info/b3ddb7c5b10be95dbc3f9152c58becce.html&#34;&gt;pyenvとvenvでPython3開発環境を整える&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.slideshare.net/who_you_me/10-32435124?ref=https://career.levtech.jp/guide/knowhow/article/21/?utm_source=dlvr.it&amp;amp;utm_medium=twitter&#34;&gt;10分でわかるPythonの開発環境&lt;/a&gt; ==&amp;gt; インストールの方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以上は、基礎知識。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://timmyreilly.azurewebsites.net/python-pip-virtualenv-installation-on-windows/&#34;&gt;Python, Pip, virtualenv installation on Windows | timbo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>mysqlとか、その関連</title>
